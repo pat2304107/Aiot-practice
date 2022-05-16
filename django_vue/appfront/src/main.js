@@ -10,6 +10,8 @@ import VueResource from "vue-resource";
 import "element-ui/lib/theme-chalk/index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
+import "@fortawesome/fontawesome-free/css/all.css";
+import "@fortawesome/fontawesome-free/js/all.js";
 
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false;
