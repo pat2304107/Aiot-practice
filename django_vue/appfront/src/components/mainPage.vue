@@ -1,20 +1,39 @@
 <template>
   <div class="main">
-    <div class="container vh-100">
+    <div class="container vh-100 ">
       <div class="row h-100">
-        <div class="border col-9 h-100">123</div>
-        <div class="border col-3 h-100 d-flex flex-column align-items-center">
-          <div class="text-white">
-            <div>123123</div>
-            <div>及時人數</div>
+        <div class="col-9 h-100 row row-cols-3">
+          <div class="col">
+            <img class="img-fluid py-4" src="../assets/court0.png" alt="" />
+          </div>
+          <div class="col">
+            <img class="img-fluid py-4" src="../assets/court0.png" alt="" />
+          </div>
+          <div class="col">
+            <img class="img-fluid py-4" src="../assets/court0.png" alt="" />
+          </div>
+          <div class="col">
+            <img class="img-fluid py-4" src="../assets/court0.png" alt="" />
+          </div>
+          <div class="col">
+            <img class="img-fluid py-4" src="../assets/court0.png" alt="" />
+          </div>
+          <div class="col">
+            <img class="img-fluid py-4" src="../assets/court0.png" alt="" />
+          </div>
+        </div>
+        <div class="col-3 h-100 d-flex flex-column align-items-center">
+          <div class="text-white mt-5 mb-4">
+            <div class="fs-1">123123</div>
+            <div class="fs-5">及時人數</div>
+          </div>
+          <div class="text-white mb-4">
+            <div class="fs-1">123123</div>
+            <div class="fs-5">溫度</div>
           </div>
           <div class="text-white">
-            <div>123123</div>
-            <div>溫度</div>
-          </div>
-          <div class="text-white">
-            <div>123123</div>
-            <div>濕度</div>
+            <div class="fs-1">123123</div>
+            <div class="fs-5">濕度</div>
           </div>
         </div>
       </div>
@@ -24,6 +43,6 @@
 
 <style>
 .main {
-  background-color: #3a3a3a;
+  background-color: #01161e;
 }
 </style>
