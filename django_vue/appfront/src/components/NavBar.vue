@@ -1,7 +1,9 @@
 <template>
-  <nav class="navbar navbar-light navColor">
+  <nav class="navbar navbar-light navColor navHeight py-0">
     <div class="container">
-      <a class="navbar-brand text-white fs-1" href="#">羽球館及時使用狀況</a>
+      <a class="navbar-brand text-white fs-1 fw-bold" href="#"
+        >羽球館及時使用狀況</a
+      >
       <button
         type="button"
         class="btn navColor border border-secondary row justify-content-center"
@@ -14,8 +16,11 @@
   </nav>
 </template>
 
-<style>
+<style scoped>
 .navColor {
   background-color: #124559;
+}
+.navHeight {
+  height: 10vh;
 }
 </style>
