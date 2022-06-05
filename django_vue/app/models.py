@@ -1,9 +1,10 @@
 from django.db import models
 
 # Create your models here.
-class Book(models.Model):
-    book_name = models.CharField(max_length=64)
-    add_time = models.DateTimeField(auto_now_add=True)
+
+class BadmintonInfo(models.Model):
+    occupied = models.CharField(max_length=100,null=True)
+    nums = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.book_name
+        return str(self.occupied) + " " + str(self.nums)

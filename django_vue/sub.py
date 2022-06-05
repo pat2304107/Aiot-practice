@@ -3,7 +3,7 @@ import django
 import mqtt
 import json
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_tutorial_4x.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_vue.settings")
 django.setup()
 
 
@@ -12,9 +12,9 @@ def handlerGenerator(models):
         data = msg.payload.decode('utf-8')
         data_json = json.loads(data)
 
-        models.WeatherInfo.objects.create(
-            temperature=data_json["Temperature"],
-            time=data_json["Time"],
+        models.BadmintonInfo.objects.create(
+            occupied=data_json["Occupied"],
+            nums=data_json["Nums"],
         )
 
         print(data)
@@ -23,10 +23,10 @@ def handlerGenerator(models):
 
 
 if __name__ == "__main__":
-    from weather import models
+    from app import models
 
-    scope = "625639c4649b297b8f2172a0"
-    username = "6284c047649b297b8f2172b2"
+    scope = "625639b8649b297b8f21729f"
+    username = "62986aa5649b297b8f2172b7"
     password = "1234"
 
     sub = mqtt.IdeaSkyMQTTSubscriber(

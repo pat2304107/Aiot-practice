@@ -2,7 +2,7 @@
   <nav class="navbar navbar-light navColor navHeight py-0">
     <div class="container">
       <a class="navbar-brand text-white fs-1 fw-bold" href="#"
-        >羽球館及時使用狀況</a
+        >羽球館即時使用狀況</a
       >
       <button
         type="button"

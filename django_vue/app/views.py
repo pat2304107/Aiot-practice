@@ -1,38 +1,20 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.http import JsonResponse
+from django.http import HttpResponse
 from django.views.decorators.http import require_http_methods
+from .models import BadmintonInfo
 from django.core import serializers
 import requests
 import json
 
-from .models import Book
 
-@require_http_methods(["GET"])
-def add_book(request):
-    response = {}
-    try:
-        book = Book(book_name=request.GET.get('book_name'))
-        book.save()
-        response['msg'] = 'success'
-        response['error_num'] = 0
-    except  Exception as e:
-        response['msg'] = str(e)
-        response['error_num'] = 1
 
-    return JsonResponse(response)
+def badminton_page(request):
+    data = serializers.serialize("json", BadmintonInfo.objects.all().order_by("-id")[:1])
+    # [
+    #   {"temperature": 1}, .....
+    # ]
+    #
 
-@require_http_methods(["GET"])
-def show_books(request):
-    response = {}
-    try:
-        books = Book.objects.filter()
-        response['list']  = json.loads(serializers.serialize("json", books))
-        response['msg'] = 'success'
-        response['error_num'] = 0
-    except  Exception as e:
-        response['msg'] = str(e)
-        response['error_num'] = 1
-
-    return JsonResponse(response)
+    return HttpResponse(data)
